@@ -11,5 +11,75 @@ console.log(result);
 
 // problem-3: Now do the same task of question 2. But do this using array.find() method. Then compare the output of question 2 & question 3;
 const number2 = [ 33, 50, 48, 75, 69, 50]
-const result1 = number3.find(num => num % 10 === 0);
-console.log(result1);
+const result2 = number2.find(num => num % 10 === 0);
+console.log(result2);
+
+
+// 1) How will you access Sophia’s secondary school location?
+
+let data = {
+        Sophia: {
+            id: 33,
+            study: [
+                {
+                    primary:
+                        [
+                            { school_name: "ABC primary school" },
+                            { location: "Peters burg" }
+                        ]
+                },
+                {
+                    secondary:
+                        [
+                            { school_name: "ABC secondary school"
+
+                            },
+
+                            { location: "St Lorence" }
+                        ]
+                },
+                    ]
+                }
+        } 
+
+const sophiaSecondarySchoolLocation = data.Sophia.study[1].secondary[1]['location'];
+console.log(sophiaSecondarySchoolLocation);
+
+
+
+// How will you get the output
+//  a) abc
+//  b) xyz
+
+let activities = {
+activity1 : [
+{
+name : "listen on spotify",
+
+song_list: {
+
+song_1 : "abc",
+song_2 : "bcd"
+
+},
+id : 1
+},
+{
+name : "listen music through bot",
+
+song_list: {
+song_1 : "wxy",
+song_2 : "xyz"
+
+},
+id : 2
+}
+]
+}
+
+const activity1 = activities.activity1;
+const song1Activity1 = activity1[0].song_list.song_1;
+const song1Activity2 = activity1[1].song_list.song_1;
+
+console.log(song1Activity1);
+console.log(song1Activity2);
